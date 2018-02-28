@@ -10,5 +10,5 @@ public class utilidades {
     public static final String campo_nombre="nombre";
     public static final String campo_telefono="telefono";
 
-    public static final String crearTablaContacto="CREATE TABLE "+TablaContacto+"("+campo_id+" INT"+", "+campo_nombre+" TEXT,"+campo_telefono+" TEXT)";
+    public static final String crearTablaContacto="CREATE TABLE "+TablaContacto+"("+campo_id+" INTEGER PRIMARY KEY AUTOINCREMENT"+", "+campo_nombre+" TEXT,"+campo_telefono+" TEXT)";
 }

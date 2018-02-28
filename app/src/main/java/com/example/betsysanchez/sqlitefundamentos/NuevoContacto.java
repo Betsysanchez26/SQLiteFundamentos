@@ -1,6 +1,7 @@
 package com.example.betsysanchez.sqlitefundamentos;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,15 +35,17 @@ public class NuevoContacto extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 registrarContactos();
+                finish();
+                Intent i=new Intent(NuevoContacto.this,MainActivity.class);
+                startActivity(i);
             }
         });
     }
 
     private void registrarContactos() {
-        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_contactos",null,1);
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this);
         SQLiteDatabase db=conn.getWritableDatabase();
         ContentValues values=new ContentValues();
-    //    values.put(utilidades.campo_id,Integer.parseInt(id.getText().toString()));
         values.put(utilidades.campo_nombre,nombre.getText().toString());
         values.put(utilidades.campo_telefono,telefono.getText().toString());
 
