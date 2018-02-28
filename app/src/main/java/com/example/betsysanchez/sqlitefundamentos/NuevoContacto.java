@@ -37,9 +37,6 @@ public class NuevoContacto extends AppCompatActivity {
             }
         });
     }
-   // public void onClick(View v){
-    //    registrarContactos();
-   // }
 
     private void registrarContactos() {
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_contactos",null,1);
